@@ -1,0 +1,13 @@
+[Unit]
+Description=All The Mods Minecraft
+After=network.target
+
+[Service]
+Type=simple
+User=mcuser-atm
+ExecStart=/home/mcuser-atm/Server-Files-0.2.60/run.sh
+ExecStop=/bin/kill $MAINPID
+Environment="JAVA_HOME=/usr/lib/jvm/jre-17-openjdk-17.0.11.0.9-2.el8.x86_64"
+
+[Install]
+WantedBy=multi-user.target
